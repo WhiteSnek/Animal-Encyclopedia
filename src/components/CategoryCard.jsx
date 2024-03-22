@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { Stack, Typography } from '@mui/material'
 import CategoryImage from '../assets/images/logo.png'
-const CategoryCard = ({item}) => {
-    const [category,setCategory] = useState('')
+const CategoryCard = ({item, category, setCategory}) => {
+    
   return (
     <Stack type="button"
     alignItems="center"
     justifyContent="center"
     className="bodyPart-card"
-    sx={category === item ? { borderTop: '4px solid #FF2625', background: '#fff', borderBottomLeftRadius: '20px', width: '270px', height: '282px', cursor: 'pointer', gap: '47px' } : { background: '#fff', borderBottomLeftRadius: '20px', width: '270px', height: '282px', cursor: 'pointer', gap: '47px' }}
+    sx={category === item ? { borderTop: '4px solid #FF2625', background: '#defcf2', borderBottomLeftRadius: '20px', width: '270px', height: '282px', cursor: 'pointer', gap: '47px' } : { background: '#defcf2', borderBottomLeftRadius: '20px', width: '270px', height: '282px', cursor: 'pointer', gap: '47px' }}
     onClick={() => {
       setCategory(item)
       window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });

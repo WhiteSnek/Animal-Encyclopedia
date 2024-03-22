@@ -45,13 +45,15 @@ const LeftArrow = () => {
     );
   };
   
-  const HorizontalScrollBar = () => {
+  const HorizontalScrollBar = ({category, setCategory}) => {
     return (
         <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} scrollContainerClassName='react-horizontal-scrolling-menu--wrapper'>
       {data.map((item,index) => (
         <CategoryCard
           item={item}
           key={index}
+          category={category}
+          setCategory={setCategory}
         />
       ))}
     </ScrollMenu>
